@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>格子格子</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="C语言：结构与其他数据类型通过结构变量提高表达数据的能力.  为结构建立一个格式或者样式. 声明一个适合该样式的变量. 访问结构变量的各个部分.  结构基本使用建立结构声明结构声明描述一个结构的组织布局. 如: 12345struct book&amp;#123;              &#x2F;&#x2F;struct 标记名    char title[10];       &#x2F;&#x2F;结构成员列表(任意数据类型或者结构)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="格子格子">
+<meta property="og:url" content="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="格子格子">
+<meta property="og:description" content="C语言：结构与其他数据类型通过结构变量提高表达数据的能力.  为结构建立一个格式或者样式. 声明一个适合该样式的变量. 访问结构变量的各个部分.  结构基本使用建立结构声明结构声明描述一个结构的组织布局. 如: 12345struct book&amp;#123;              &#x2F;&#x2F;struct 标记名    char title[10];       &#x2F;&#x2F;结构成员列表(任意数据类型或者结构)">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-22T23:01:55.191Z">
+<meta property="article:modified_time" content="2020-09-16T18:09:27.256Z">
+<meta property="article:author" content="LZQ">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="格子格子" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">格子格子</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C语言：结构类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.191Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C语言：结构与其他数据类型"><a href="#C语言：结构与其他数据类型" class="headerlink" title="C语言：结构与其他数据类型"></a>C语言：结构与其他数据类型</h1><p>通过<strong>结构变量</strong>提高表达数据的能力.</p>
+<ul>
+<li>为结构建立一个格式或者样式.</li>
+<li>声明一个适合该样式的变量.</li>
+<li>访问结构变量的各个部分.</li>
+</ul>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><h4 id="建立结构声明"><a href="#建立结构声明" class="headerlink" title="建立结构声明"></a>建立结构声明</h4><p>结构声明描述一个结构的组织布局.</p>
+<p>如:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span>              <span class="comment">//struct 标记名</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">10</span>];       <span class="comment">//结构成员列表(任意数据类型或者结构)</span></span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">float</span> value;</span><br><span class="line">&#125;;                        <span class="comment">//分号;表示该 结构声明 结束</span></span><br></pre></td></tr></table></figure>
+
+<p>结构声明(模板)仅仅该对象由什么组成,并未创建实际的对象.</p>
+<h4 id="定义结构变量"><a href="#定义结构变量" class="headerlink" title="定义结构变量"></a>定义结构变量</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span>              </span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">10</span>];      </span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">float</span> value;</span><br><span class="line">&#125;;   <span class="comment">//建立结构声明</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>;</span>   <span class="comment">//创建了一个结构变量library,该变量的结构布局是book</span></span><br></pre></td></tr></table></figure>
+
+<p>简化形式:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span>              <span class="comment">//sturct 标记名 (如果该模板仅仅使用一次,可省略)</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">10</span>];      <span class="comment">//成员表或成员函数</span></span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">10</span>];    </span><br><span class="line">    <span class="keyword">float</span> value;</span><br><span class="line">&#125;library;               <span class="comment">//结构体变量表,可以同时定义多个结构体变量,用逗号隔开</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="初始化结构"><a href="#初始化结构" class="headerlink" title="初始化结构"></a>初始化结构</h4><p>与初始化数组语法类似.</p>
+<p>使用一对花括号,各个初始化项用逗号分隔.</p>
+<p>如:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span>              </span><br><span class="line">    abcdefghij,      </span><br><span class="line">    klmnopqrst,</span><br><span class="line">    <span class="number">1.9</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="访问结构成员"><a href="#访问结构成员" class="headerlink" title="访问结构成员"></a>访问结构成员</h4><p>使用结构成员运算符—-点(.)访问结构中的成员</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">library.value=<span class="number">3</span>  ;  <span class="comment">//对结构中float类型变量value进行赋值</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>=</span>&#123;.value=<span class="number">3</span>&#125;;  <span class="comment">//结构的初始化器</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%f&quot;</span>,&amp;library.value); </span><br><span class="line"><span class="comment">//由此可见逗号(,取成员)的优先级高于&amp;(取地址)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="向函数传递结构的信息"><a href="#向函数传递结构的信息" class="headerlink" title="向函数传递结构的信息"></a>向函数传递结构的信息</h3><h4 id="传递结构"><a href="#传递结构" class="headerlink" title="传递结构"></a>传递结构</h4><ul>
+<li>结构作为函数参数<ul>
+<li>整个结构可以作为参数的值传入函数</li>
+<li>这时候是在函数内新建一个结构变量,并复制调用者的结构的值<ul>
+<li>只是传递了原结构的值</li>
+</ul>
+</li>
+<li>也可以返回一个结构<ul>
+<li>可以通过返回这个结构给调用者，解决传入函数的是外面那个结构的克隆体而原结构没有改变的问题。（同类型结构可以直接赋值）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="传递结构的地址"><a href="#传递结构的地址" class="headerlink" title="传递结构的地址"></a>传递结构的地址</h4><blockquote>
+<p>“If a large structure is to be passed to a function, it is generally more efficient to pass a pointer than to copy the whole structure”                                                                                  —— K&amp;R</p>
+</blockquote>
+<p>例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">date</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> month; </span><br><span class="line">    <span class="keyword">int</span> day;</span><br><span class="line">    <span class="keyword">int</span> year;</span><br><span class="line">&#125;myday; </span><br><span class="line"></span><br><span class="line"><span class="comment">//声明与初始化结构指针</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">date</span> *<span class="title">p</span>=</span>&amp;myday; </span><br><span class="line"><span class="comment">//定义了一个指向struct date模板类型的指针变量，并被赋上myday的地址</span></span><br><span class="line"></span><br><span class="line">(*p).month=<span class="number">12</span>; <span class="comment">//常规方式1</span></span><br><span class="line">p-&gt;month=<span class="number">12</span>;  <span class="comment">//方式2，（更加简洁）</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>用-&gt;表示指针所指的结构变量中的成员</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">struct point* <span class="title">getStruct</span><span class="params">(struct point *p)</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;p-&gt;x); </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;p-&gt;y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d,%d&quot;</span>,&amp;p-&gt;x,&amp;p-&gt;y);</span><br><span class="line">    <span class="keyword">return</span> p;<span class="comment">//方便接下来有函数调用，提高程序简洁度</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h3 id="结构数组"><a href="#结构数组" class="headerlink" title="结构数组"></a>结构数组</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span> [10];</span></span><br></pre></td></tr></table></figure>
+
+<p>以上代码把library声明为一个内含10个元素的数组。数组的每一个元素都是book类型的结构变量</p>
+<h3 id="嵌套结构"><a href="#嵌套结构" class="headerlink" title="嵌套结构"></a>嵌套结构</h3><p>一个结构包含另一个结构。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">point</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">int</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//rectangle结构里的成员也是结构point</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rectangle</span>&#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">point</span> <span class="title">ptl</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">point</span> <span class="title">pt2</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> x1;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果有变量定义：</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rectangle</span> <span class="title">r</span>,*<span class="title">rp</span>;</span></span><br><span class="line">rp =&amp;r;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//那么下面的四种形式是等价的：</span></span><br><span class="line">x1 = r.ptl.x </span><br><span class="line">x1 = rp-&gt;ptl.x </span><br><span class="line">x1 = (r.ptl).x </span><br><span class="line">x1 = (rp-&gt;ptl).x</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p><strong>枚举</strong> 是一种用户定义的数据类型。</p>
+<p><strong>枚举类型</strong>可以声明符号名称来表示整型常量。</p>
+<p>目的：提高程序可读性和可维护性。</p>
+<p>它用关键字enum以如下语法来声明：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> 枚举类型名字&#123;</span>名字<span class="number">0.</span>...（枚举符）..名字n&#125;；</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>枚举类型名字通常并不真的使用,要用的是在大括号里的名字</p>
+<p>因为它们就是就是常量符号,它们的类型是int,值则依次从0到n。</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">colors</span>&#123;</span>red, yellow.,green&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建了三个常量,red的值是0, yellow是1,而 green是2</li>
+<li>当需要一些可以排列起来的常量值时,定义枚举的意义就是给了这些常量值名字。</li>
+</ul>
+<h2 id="联合"><a href="#联合" class="headerlink" title="联合"></a>联合</h2><p><strong>联合</strong>是一种数据类型，它能够在<strong>同一个内存空间</strong>中储存不同的数据类型。</p>
+<ul>
+<li>储存<ul>
+<li>所有的成员共享一个空间</li>
+<li>同一时间只有一个成员是有效的</li>
+<li>union的大小是其最大的成员</li>
+</ul>
+</li>
+<li>初始化<ul>
+<li>对第一个成员做初始化</li>
+</ul>
+</li>
+</ul>
+<h2 id="自定义数据类型（typedef）"><a href="#自定义数据类型（typedef）" class="headerlink" title="自定义数据类型（typedef）"></a>自定义数据类型（typedef）</h2><p>C语言提供了一个叫做 typedef的功能来声明一个已有的数据类型的新名字。</p>
+<p>声明类型新的名字</p>
+<ul>
+<li>新的名字是某种类型的别名</li>
+<li>改善了程序的可读性</li>
+</ul>
+<p>比如:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Length;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span><span class="keyword">int</span> x;<span class="keyword">int</span> y;&#125; rect;</span><br><span class="line"><span class="comment">//typedef 原类型名称 新名字</span></span><br></pre></td></tr></table></figure>
+
+<p>使得 Length成为int类型的别名。<br>这样, Length这个名字就可以代替int出现在变量定义和参数声明的地方了:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Length a, b, len;</span><br><span class="line">Length numbers[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/" data-id="ckglfn8du0006c87ybm1m3i62" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/23/IO%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 LZQ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

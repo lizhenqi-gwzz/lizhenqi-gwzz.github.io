@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>格子格子</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="笔记printf()的转换说明修饰符（部分）数字指最小字段宽度。 若打印的字符宽度小于数字，则在前方加上空格。 12printf(&quot;0%3d0\n&quot;,3); printf(&quot;%06d0\n&quot;,6);   输出: 1230   60  .数字指精读    %e %E %f(浮点数) 小数点右边数字的位数    %g %G 有效数字的最大个数   %s 待打印字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="格子格子">
+<meta property="og:url" content="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="格子格子">
+<meta property="og:description" content="笔记printf()的转换说明修饰符（部分）数字指最小字段宽度。 若打印的字符宽度小于数字，则在前方加上空格。 12printf(&quot;0%3d0\n&quot;,3); printf(&quot;%06d0\n&quot;,6);   输出: 1230   60  .数字指精读    %e %E %f(浮点数) 小数点右边数字的位数    %g %G 有效数字的最大个数   %s 待打印字">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-22T23:01:55.193Z">
+<meta property="article:modified_time" content="2020-10-03T14:13:32.986Z">
+<meta property="article:author" content="LZQ">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="格子格子" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">格子格子</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C语言：记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.193Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><h2 id="printf-的转换说明修饰符（部分）"><a href="#printf-的转换说明修饰符（部分）" class="headerlink" title="printf()的转换说明修饰符（部分）"></a>printf()的转换说明修饰符（部分）</h2><h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><p>指最小字段宽度。</p>
+<p>若打印的字符宽度小于数字，则在前方加上空格。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;0%3d0\n&quot;</span>,<span class="number">3</span>); </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%06d0\n&quot;</span>,<span class="number">6</span>); </span><br></pre></td></tr></table></figure>
+
+<p>输出:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">30</span></span><br><span class="line">   <span class="number">60</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="数字-1"><a href="#数字-1" class="headerlink" title=".数字"></a>.数字</h3><p>指精读</p>
+<table>
+<thead>
+<tr>
+<th>%e %E %f(浮点数)</th>
+<th>小数点右边数字的位数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%g %G</td>
+<td>有效数字的最大个数</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>待打印字符的最大数量</td>
+</tr>
+<tr>
+<td>整形转换</td>
+<td>待打印数字的最大位数</td>
+</tr>
+</tbody></table>
+<h3 id=""><a href="#" class="headerlink" title="-"></a>-</h3><p>待打印项左对齐。即，从字段的左侧开始打印该项。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%-3d0\n&quot;</span>,<span class="number">3</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%-6d0\n&quot;</span>,<span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>  <span class="number">0</span></span><br><span class="line"><span class="number">6</span>     <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="-1"><a href="#-1" class="headerlink" title="+"></a>+</h3><p>有符号值若为正，则在值前面显示加号；若为负，则在值前面显示减号。</p>
+<h1 id="scanf多组样例输入"><a href="#scanf多组样例输入" class="headerlink" title="scanf多组样例输入"></a>scanf多组样例输入</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;k)!=EOF)</span><br></pre></td></tr></table></figure>
+
+<p>此类多实例测试解决方案：<br>while(scanf(“%d%d”,&amp;a,&amp;b)!=EOF)<br>{<br>//读入一组测试数据<br>//处理<br>//输出结果<br>}<br>注：EOF是宏定义常量-1，scanf函数遇到文件结束标志函数返回值是-1，键盘输入时，ctrl+z表示输入结束<br>例如：<br>while(scanf(“%d%d”,&amp;a,&amp;b)!=EOF)<br>  printf(“%d\n”,a+b);</p>
+<h1 id="fabs-a-＜1e－10"><a href="#fabs-a-＜1e－10" class="headerlink" title="fabs(a)＜1e－10"></a>fabs(a)＜1e－10</h1><p>如果fabs(a)＜1e－6，则默认a=0.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fabs</span>(a)＜<span class="number">1</span>e－<span class="number">6</span>;</span><br><span class="line"><span class="comment">//fabs()为浮点数的绝对值</span></span><br><span class="line"><span class="comment">//库函数为math.h</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>C语言中浮点运算是有精度限制的，在经过很多次运算之后，这个误差会累积下来，理论上等于0，但由于精度问题，C语言算出来不是0，这种情况经常有。所以设定一个限度，认为绝对值小于0.000001就是0了，这个0.000001是经验值，实践中表现的比较好.</p>
+<ul>
+<li>在浮点数的除法运算时，要注意这个问题。</li>
+</ul>
+<h1 id="数据类型溢出问题"><a href="#数据类型溢出问题" class="headerlink" title="数据类型溢出问题"></a>数据类型溢出问题</h1><blockquote>
+<p>ZZULIOJ</p>
+<h5 id="1063-最大公约与最小公倍"><a href="#1063-最大公约与最小公倍" class="headerlink" title="1063: 最大公约与最小公倍"></a><strong>1063: 最大公约与最小公倍</strong></h5><p><strong>输入</strong><br>输入两个正整数n和m（n,m&lt;=1000000)。输入保证最终结果在int范围内。</p>
+</blockquote>
+<p>数据较大的数据在运行过程中可能发生数据溢出。</p>
+<ul>
+<li>一般乘法可能溢出，但是除法一定不会溢出。因此同时存在乘法和除法运算的式子里应该先写除法，避免过程溢出。</li>
+<li>保险起见数据类型还是应该改为double以保证风险最小</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>字节</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>4</td>
+<td>（-2^31～2^31-1）</td>
+</tr>
+<tr>
+<td>long int 或 long</td>
+<td>4</td>
+<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
+</tr>
+<tr>
+<td>long long int 或 long long</td>
+<td>8</td>
+<td>-2^63(-9.2233720368548e+18) ~ 2^63-1(9.2233720368548e+18)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4</td>
+<td>-/+3.4e38（精确到6位小数）</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>-/+1.7e308（精确到15位小数）</td>
+</tr>
+</tbody></table>
+<h1 id="c中nan，inf详解"><a href="#c中nan，inf详解" class="headerlink" title="c中nan，inf详解"></a>c中nan，inf详解</h1><p><strong>nan</strong>： not a number 非数字</p>
+<p>注意事项：对负数开方sqrt(-1.0)、 对负数求对数(log(-1.0))、 0.0/0.0、 0.0*inf、 inf/inf、 inf-inf 这些操作都会得到nan。</p>
+<p>(0/0会产生操作异常；0.0/0.0不会产生操作异常，而是会得到nan)</p>
+<p>辨别方法：isnan() : ture is a nan, false otherwise</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">isnan(NaN) &#x3D; true</span><br><span class="line"></span><br><span class="line">isnan(Inf) &#x3D; false</span><br><span class="line"></span><br><span class="line">isnan(0.0) &#x3D; false</span><br><span class="line"></span><br><span class="line">isnan(DBL_MIN&#x2F;2.0) &#x3D; false</span><br><span class="line"></span><br><span class="line">isnan(0.0 &#x2F; 0.0)   &#x3D; true</span><br><span class="line"></span><br><span class="line">isnan(Inf - Inf)   &#x3D; true</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>inf</strong> : infinity 无穷大的数，一般是超过浮点数的表示范围。</p>
+<p>注意事项：</p>
+<ol>
+<li><p>1.0/0.0等于inf，-1.0/0.0等于-inf，0.0+inf=inf；</p>
+</li>
+<li><p>1.0/inf等于0.0</p>
+</li>
+<li><p>inf是可以与其他浮点数进行比较的，即可以参与&lt;=、&gt;+、==、!=等运算。</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">辨别方法：isinf(): ture is a nan, false otherwise</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">isinf(NaN) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isinf(Inf) = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">isinf(<span class="number">0.0</span>) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isinf(<span class="built_in">exp</span>(<span class="number">800</span>)) = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">isinf(DBL_MIN/<span class="number">2.0</span>) = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>另一个辨别方法：isfinite(): ture is a finite value, false otherwise。可用来一起判断inf和nan。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">isfinite(NaN) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isfinite(Inf) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isfinite(<span class="number">0.0</span>) = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">isfinite(<span class="built_in">exp</span>(<span class="number">800</span>)) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isfinite(DBL_MIN/<span class="number">2.0</span>) = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/" data-id="ckglfn8dx0007c87ya5605rqn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/23/IO%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/23/IO%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 LZQ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>格子格子</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="C语言：数组数组由数据类型相同的一系列元素组成是一种容器(放东西的东西),由连续的储存单元组成。特点是:  其中所有的元素具有相同的数据类型;  一旦创建,不能改变大小(数组中的元素在内存中是连续依次排列的)  定义数组&lt;类型&gt;变量名称[元素数量]例 12int grades[100]:double weight[20];  元素数量必须是整数   数组的单元 数组的每个单元就是数组类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="格子格子">
+<meta property="og:url" content="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:site_name" content="格子格子">
+<meta property="og:description" content="C语言：数组数组由数据类型相同的一系列元素组成是一种容器(放东西的东西),由连续的储存单元组成。特点是:  其中所有的元素具有相同的数据类型;  一旦创建,不能改变大小(数组中的元素在内存中是连续依次排列的)  定义数组&lt;类型&gt;变量名称[元素数量]例 12int grades[100]:double weight[20];  元素数量必须是整数   数组的单元 数组的每个单元就是数组类">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20200824112012737.png">
+<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20200824111837475.png">
+<meta property="article:published_time" content="2020-10-22T23:01:55.186Z">
+<meta property="article:modified_time" content="2020-09-05T09:06:12.647Z">
+<meta property="article:author" content="LZQ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20200824112012737.png">
+  
+    <link rel="alternate" href="/atom.xml" title="格子格子" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">格子格子</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C语言：数组" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.186Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C语言：数组"><a href="#C语言：数组" class="headerlink" title="C语言：数组"></a>C语言：数组</h1><p><strong>数组由数据类型相同的一系列元素组成</strong><br>是一种容器(放东西的东西),由连续的储存单元组成。<br>特点是:</p>
+<ul>
+<li>其中所有的元素具有相同的数据类型;</li>
+<li> 一旦创建,不能改变大小<br>(数组中的元素在内存中是连续依次排列的)</li>
+</ul>
+<h2 id="定义数组"><a href="#定义数组" class="headerlink" title="定义数组"></a>定义数组</h2><p><strong>&lt;类型&gt;变量名称[元素数量]</strong><br>例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int grades[100]:</span><br><span class="line">double weight[20];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>元素数量必须是整数</li>
+</ul>
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200824112012737.png" alt="image-20200824112012737"></p>
+<h3 id="数组的单元"><a href="#数组的单元" class="headerlink" title="数组的单元"></a>数组的单元</h3><ul>
+<li>数组的每个单元就是数组类型的一个变量</li>
+<li>使用数组时放在[中的数字叫做下标或索引,下标从0开始计数:</li>
+</ul>
+<h2 id="初始化数组"><a href="#初始化数组" class="headerlink" title="初始化数组"></a>初始化数组</h2><p>数组的集成初始化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[ ] &#x3D;&#123;2,4,6,7,1,3,5,9,11,13,23,14,32&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>直接用大括号给出数组的所有元素的初始值</li>
+<li>不需要要给出数组的大小,编译器替你数数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int count [number] &#x3D;&#123;0)；</span><br><span class="line"></span><br><span class="line">for（i&#x3D;0; i&lt;number; i++) &#123;</span><br><span class="line">count[i]&#x3D;0;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;上面两种初始化方式效果相同</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="指定初始化器"><a href="#指定初始化器" class="headerlink" title="指定初始化器"></a>指定初始化器</h3><p>可以初始化指定的数组元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[5]&#x3D;&#123;[4]&#x3D;1&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对于一般初始化，在初始化一个元素后，未初始化的元素都会被设置为0.</li>
+<li>如果指定初始化器后面有更多值，后面的值将被用于初始化指定元素后面的元素</li>
+<li>如果再次初始化指定元素，后者会覆盖之前的初始化。</li>
+<li>对于未指定元素大小数组的初始化，编译器会设置一个刚好恰当的值。<h2 id="数组的大小"><a href="#数组的大小" class="headerlink" title="数组的大小"></a>数组的大小</h2>sizeof给出整个数组所占据的内容的大小,单位是字节<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sizeof(a)&#x2F;sizeof(a[0])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+sizeof(a[0])给出数组中单个元素的大小,于是相除就得到了数组的单元个数<h2 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h2><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200824111837475.png" alt="image-20200824111837475"></li>
+</ul>
+<p>注：<br><strong>数组作为函数参数时，往往必须再用另一个参数来传入数组的大小。</strong><br>    数组作为函数的参数时:<br>    * 不能在中给出数组的大小</p>
+<ul>
+<li>不能再利用 sizeof来计算数组的元素个数!</li>
+</ul>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><h3 id="二维数组的初始化"><a href="#二维数组的初始化" class="headerlink" title="二维数组的初始化"></a>二维数组的初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int a[][5]&#x3D;&#123;</span><br><span class="line">&#123;0,1,2,3,4&#125;,</span><br><span class="line">&#123;2,3,4,5,6&#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F;或者：</span><br><span class="line">int b[2][3]&#x3D;&#123;1,2,3,4,5,6&#125;;</span><br><span class="line">&#x2F;&#x2F;表示  12</span><br><span class="line">          34</span><br><span class="line">          56</span><br></pre></td></tr></table></figure>
+<ul>
+<li>列数是必须给出的,行数可以由编译器来数</li>
+<li>每行一个{},逗号分隔</li>
+<li>最后的逗号可以存在,有古老的传统</li>
+<li>如果省略,表示补零</li>
+<li>也可以用定位(C99ON)</li>
+</ul>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><h4 id="大数组要定义在主函数外部的原因"><a href="#大数组要定义在主函数外部的原因" class="headerlink" title="大数组要定义在主函数外部的原因"></a>大数组要定义在主函数外部的原因</h4><ul>
+<li><p>全局变量在静态存储区内分配内存</p>
+</li>
+<li><p>局部变量是在栈内分配内存空间的</p>
+</li>
+</ul>
+<p>C语言编写的程序会在运行期间创建一个栈堆段，用来保存函数的调用关系和局部变量。</p>
+<p>而在main函数内部定义大数组相当于在栈内需要一个很大的空间，会造成栈的溢出。<br>因此，当我们需要定义一个极大的数组时，最好在mian 函数外部定义这个大数组。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/" data-id="ckglfn8dq0004c87yh7snapeu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%8C%87%E9%92%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/23/IO%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 LZQ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

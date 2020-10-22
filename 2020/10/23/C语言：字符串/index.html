@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>格子格子</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="字符串字符串是一个或者多个字符的序列，以空字符(\0)结尾的char类型的数组。  C语言的字符串是以字符数组的形态存在的  不能用运算符对字符串做运算 通过数组的方式可以遍历字符串   以0(整数0)结尾的一串字符  0或‘\0’是一样的,但是和‘0’不同  0标志字符串的结束,但它不是字符串的一部分  计算字符串长度的时候不包含这个0   字符串以数组的形式存在,以数组或指针的形式访问  更多">
+<meta property="og:type" content="article">
+<meta property="og:title" content="格子格子">
+<meta property="og:url" content="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
+<meta property="og:site_name" content="格子格子">
+<meta property="og:description" content="字符串字符串是一个或者多个字符的序列，以空字符(\0)结尾的char类型的数组。  C语言的字符串是以字符数组的形态存在的  不能用运算符对字符串做运算 通过数组的方式可以遍历字符串   以0(整数0)结尾的一串字符  0或‘\0’是一样的,但是和‘0’不同  0标志字符串的结束,但它不是字符串的一部分  计算字符串长度的时候不包含这个0   字符串以数组的形式存在,以数组或指针的形式访问  更多">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-22T23:01:55.181Z">
+<meta property="article:modified_time" content="2020-10-01T09:47:32.297Z">
+<meta property="article:author" content="LZQ">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="格子格子" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">格子格子</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C语言：字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.181Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p><strong>字符串</strong>是一个或者多个字符的序列，以空字符(\0)结尾的char类型的数组。</p>
+<ul>
+<li><p>C语言的字符串是以字符数组的形态存在的</p>
+<ul>
+<li>不能用运算符对字符串做运算</li>
+<li>通过数组的方式可以遍历字符串</li>
+</ul>
+</li>
+<li><p>以0(整数0)结尾的一串字符</p>
+</li>
+<li><p>0或‘\0’是一样的,但是和‘0’不同</p>
+</li>
+<li><p>0标志字符串的结束,但它不是字符串的一部分</p>
+<ul>
+<li>计算字符串长度的时候不包含这个0</li>
+</ul>
+</li>
+<li><p>字符串以数组的形式存在,以数组或指针的形式访问</p>
+</li>
+<li><p>更多的是以指针的形式</p>
+</li>
+<li><p>string.h里有很多处理字符串的函数</p>
+</li>
+<li><p>唯一特殊的地方是字符串字面量(” “)<u><strong>可以用来初始化字符数组</strong></u></p>
+<blockquote>
+<p>不需要再定义字符数组，在定义一个字符指针变量时，便在内存中开辟了一个字符数组用来存放该字符串常量。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="字符串变量"><a href="#字符串变量" class="headerlink" title="字符串变量"></a>字符串变量</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *str =<span class="string">&quot;Hello&quot;</span>; </span><br><span class="line"><span class="comment">//给指针str所指向的字符数组写入Hello</span></span><br><span class="line"><span class="keyword">char</span> word[]=<span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> line[<span class="number">10</span>] =<span class="string">&quot;Hello&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Hello 会被编译器变成一个字符数组放在<em>某处</em>,这个数组的长度是6,结尾还有表示结束的0.</p>
+<ul>
+<li><p>str是一个指针,初始化为指向一个字符串常量</p>
+</li>
+<li><p>由于这个常量所在的地方,所以实际上<em>str</em>是 const char *<em>str</em>但是由于历史的原因,编译器接受不带const的写法.</p>
+</li>
+<li><p>所以字符数组所存放的位置<strong>只能读不能写</strong></p>
+<p> 字符串word[ ]可以修改</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>以数组形式</th>
+<th>以指针形式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用于<strong>构造</strong>一个字符串</td>
+<td>用于<strong>处理</strong>一个字符串</td>
+</tr>
+<tr>
+<td>可读可写入</td>
+<td>可读不可写入</td>
+</tr>
+<tr>
+<td>作为本地变量空间自动被回收</td>
+<td>处理参数           动态分配空间</td>
+</tr>
+</tbody></table>
+<h2 id="字符串的输入与输出"><a href="#字符串的输入与输出" class="headerlink" title="字符串的输入与输出"></a>字符串的输入与输出</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> <span class="built_in">string</span>[<span class="number">8</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,<span class="built_in">string</span>);<span class="comment">//不加&amp;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, <span class="built_in">string</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>scanf读入一个单词(到空格、tab或回车为止)</li>
+<li>scanf是不安全的,因为不知道要读入的内容的长度</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> <span class="built_in">string</span>[<span class="number">8</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%7s&quot;</span>, <span class="built_in">string</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在%和s之间的数字表示最多允许读入的字符的数量,这个数字应该比数组的大小少一</p>
+<h2 id="字符串数组"><a href="#字符串数组" class="headerlink" title="字符串数组"></a>字符串数组</h2><blockquote>
+<p>char **a</p>
+</blockquote>
+<p>a是一个指针,指向另一个指针,那个指针指向一个字符(串)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">5</span>] [<span class="number">6</span>]=&#123;<span class="string">&quot;hello&quot;</span></span><br><span class="line">    <span class="string">&quot;world&quot;</span></span><br><span class="line">    <span class="string">&quot;hello&quot;</span></span><br><span class="line">    <span class="string">&quot;abcd&quot;</span></span><br><span class="line">    <span class="string">&quot;efgh&quot;</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>char a[5] [6] :</p>
+<table>
+<thead>
+<tr>
+<th align="center"><em>a[0]</em></th>
+<th>h</th>
+<th>e</th>
+<th>l</th>
+<th>l</th>
+<th>o</th>
+<th>\0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><em>a[1]</em></td>
+<td>w</td>
+<td>o</td>
+<td>r</td>
+<td>l</td>
+<td>d</td>
+<td>\0</td>
+</tr>
+<tr>
+<td align="center"><em>a[2]</em></td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+<td>d</td>
+<td>\0</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><em>a[3]</em></td>
+<td>e</td>
+<td>f</td>
+<td>g</td>
+<td>h</td>
+<td>\0</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><em>a[4]</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><em>a[5]</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h2><h3 id="putchar"><a href="#putchar" class="headerlink" title="putchar"></a>putchar</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">putchar</span><span class="params">(<span class="keyword">int</span> c)</span>:</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>向标准输出写一个字符</p>
+</li>
+<li><p>返回写了几个字符,EOF(-1)表示写入失败</p>
+</li>
+</ul>
+<h3 id="getchar"><a href="#getchar" class="headerlink" title="getchar"></a>getchar</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gerchar</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>从标准输入读入一个字符</li>
+<li>返回类型是int是为了返回EOF(-1)<ul>
+<li>Windows-&gt;Ctrl-Z</li>
+<li> Unix-&gt;Ctrl-D</li>
+</ul>
+</li>
+</ul>
+<h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h3><p>头文件  <code>string.h</code>  </p>
+<h2 id="附-include-lt-ctype-h-gt"><a href="#附-include-lt-ctype-h-gt" class="headerlink" title="附#include&lt;ctype.h&gt;"></a>附#include&lt;ctype.h&gt;</h2><h3 id="1-isalnum"><a href="#1-isalnum" class="headerlink" title="1 isalnum"></a><strong>1 isalnum</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int sialnum(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>变量为字母或数字时，函数返回非0值，否则返回0。</p>
+<h3 id="2-isalpha"><a href="#2-isalpha" class="headerlink" title="2 isalpha"></a><strong>2 isalpha</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isalpha(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量为字母表中的字母时，函数返回非0值，否则返回0。各种语言的字母表互不相同，对于英语来说，字母表由大写和小写的字母A到Z组成。</p>
+<h3 id="3-iscntrl"><a href="#3-iscntrl" class="headerlink" title="3 iscntrl"></a><strong>3 iscntrl</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int iscntrl(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量是控制字符时，函数返回非0，否则返回0。</p>
+<h3 id="4-isdigit"><a href="#4-isdigit" class="headerlink" title="4 isdigit"></a><strong>4 isdigit</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isdigit(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量是十进制数字时，函数返回非0值，否则返回0。</p>
+<h3 id="5-isgraph"><a href="#5-isgraph" class="headerlink" title="5 isgraph"></a><strong>5 isgraph</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isgraph(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量为除空格之外的任何可打印字符，则函数返回非0值，否则返回0。</p>
+<h3 id="6-islower"><a href="#6-islower" class="headerlink" title="6 islower"></a><strong>6 islower</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int islower(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量是小写字母，函数返回非0值，否则返回0。</p>
+<h3 id="7-isprint"><a href="#7-isprint" class="headerlink" title="7 isprint"></a><strong>7 isprint</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isprint(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量是可打印字符(含空格)，则函数返回非0值，否则返回0。</p>
+<h3 id="8-ispunct"><a href="#8-ispunct" class="headerlink" title="8 ispunct"></a><strong>8 ispunct</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int ispunct(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量是除空格、字母和数字外的可打印字符，则函数返回非0，否则返回0。</p>
+<h3 id="9-isspace"><a href="#9-isspace" class="headerlink" title="9 isspace"></a><strong>9 isspace</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isspace(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量为空白字符(包括空格、换页符、换行符、回车符、水平制表符和垂直制表符)时，函数返回非0，否则返回0。</p>
+<h3 id="10-isupper"><a href="#10-isupper" class="headerlink" title="10 isupper"></a><strong>10 isupper</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isupper(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量为大写字母，函数返回非0，否则返回0。</p>
+<h3 id="11-isxdigit"><a href="#11-isxdigit" class="headerlink" title="11 isxdigit"></a><strong>11 isxdigit</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isxdigit(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量为十六进制数字时，函数返回非0，否则返回0。</p>
+<h3 id="12-tolower"><a href="#12-tolower" class="headerlink" title="12 tolower"></a><strong>12 tolower</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int tolower(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当ch为大写字母时，返回其对应的小写字母；否则返回ch。</p>
+<h3 id="13-toupper"><a href="#13-toupper" class="headerlink" title="13 toupper"></a><strong>13 toupper</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int toupper(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当ch为小写字母时，返回其对应的大写字母；否则返回ch。</p>
+<h2 id="程序参数"><a href="#程序参数" class="headerlink" title="程序参数*"></a>程序参数*</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio. h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> i;</span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;argc;i++)&#123;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">&quot;%d:%s\n&quot;</span>,i,argv[i])</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>int main(int argc,char const *argv[ ])</p>
+<ul>
+<li>argv[]是命令本身</li>
+<li>当使用Unix的符号链接时,反映符号链接的名字</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="ckglfn8dl0002c87ygwnfbj9a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%8C%87%E9%92%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/23/IO%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 LZQ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -64,6 +64,1157 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-IO函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/IO%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.196Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="I-O函数"><a href="#I-O函数" class="headerlink" title="I/O函数"></a>I/O函数</h1><h2 id="printf-函数"><a href="#printf-函数" class="headerlink" title="printf( )函数"></a>printf( )函数</h2><p>%[flags] [width] [.prec] [hiL] type</p>
+<h2 id="scanf-函数"><a href="#scanf-函数" class="headerlink" title="scanf( )函数"></a>scanf( )函数</h2><h3 id="scanf的基本格式"><a href="#scanf的基本格式" class="headerlink" title="scanf的基本格式"></a><strong>scanf的基本格式</strong></h3><p>scanf(“格式化字符串”，参数列表)；</p>
+<ul>
+<li>格式化字符串<ul>
+<li>表明字符输入流的目标数据类型</li>
+</ul>
+</li>
+<li>参数列表<ul>
+<li>指向变量的指针</li>
+</ul>
+</li>
+</ul>
+<h3 id="scanf-的转换说明符"><a href="#scanf-的转换说明符" class="headerlink" title="scanf()的转换说明符"></a>scanf()的转换说明符</h3><p>常用</p>
+<table>
+<thead>
+<tr>
+<th>转换说明符</th>
+<th>意 义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%u</td>
+<td>把输入解释成一个无符号十进制整数</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>把输入解释成一个字符</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>把输入解释成一个有符号十进制整数</td>
+</tr>
+<tr>
+<td>%e，%f，%g， %a</td>
+<td>把输入解释成一个浮点数 (%a是C99标准)</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>把输入解释成一个指针（地址）</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>把输入解释成一个字符串；输入的内容以一个非空白字符作为开始，并且包含直到下一个空白字符的全部字符</td>
+</tr>
+</tbody></table>
+<h3 id="scanf-的转换修饰符"><a href="#scanf-的转换修饰符" class="headerlink" title="scanf()的转换修饰符"></a>scanf()的转换修饰符</h3><p>常用</p>
+<table>
+<thead>
+<tr>
+<th>转换说明</th>
+<th>含意</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>抑制赋值</td>
+</tr>
+<tr>
+<td>数字</td>
+<td>最大字段宽度输入达到最大字段宽度处停止</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/IO%E5%87%BD%E6%95%B0/" data-id="ckglfn8dz0008c87y7ovndto0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言：记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.193Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><h2 id="printf-的转换说明修饰符（部分）"><a href="#printf-的转换说明修饰符（部分）" class="headerlink" title="printf()的转换说明修饰符（部分）"></a>printf()的转换说明修饰符（部分）</h2><h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><p>指最小字段宽度。</p>
+<p>若打印的字符宽度小于数字，则在前方加上空格。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;0%3d0\n&quot;</span>,<span class="number">3</span>); </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%06d0\n&quot;</span>,<span class="number">6</span>); </span><br></pre></td></tr></table></figure>
+
+<p>输出:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">30</span></span><br><span class="line">   <span class="number">60</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="数字-1"><a href="#数字-1" class="headerlink" title=".数字"></a>.数字</h3><p>指精读</p>
+<table>
+<thead>
+<tr>
+<th>%e %E %f(浮点数)</th>
+<th>小数点右边数字的位数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%g %G</td>
+<td>有效数字的最大个数</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>待打印字符的最大数量</td>
+</tr>
+<tr>
+<td>整形转换</td>
+<td>待打印数字的最大位数</td>
+</tr>
+</tbody></table>
+<h3 id=""><a href="#" class="headerlink" title="-"></a>-</h3><p>待打印项左对齐。即，从字段的左侧开始打印该项。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%-3d0\n&quot;</span>,<span class="number">3</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%-6d0\n&quot;</span>,<span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>  <span class="number">0</span></span><br><span class="line"><span class="number">6</span>     <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="-1"><a href="#-1" class="headerlink" title="+"></a>+</h3><p>有符号值若为正，则在值前面显示加号；若为负，则在值前面显示减号。</p>
+<h1 id="scanf多组样例输入"><a href="#scanf多组样例输入" class="headerlink" title="scanf多组样例输入"></a>scanf多组样例输入</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;k)!=EOF)</span><br></pre></td></tr></table></figure>
+
+<p>此类多实例测试解决方案：<br>while(scanf(“%d%d”,&amp;a,&amp;b)!=EOF)<br>{<br>//读入一组测试数据<br>//处理<br>//输出结果<br>}<br>注：EOF是宏定义常量-1，scanf函数遇到文件结束标志函数返回值是-1，键盘输入时，ctrl+z表示输入结束<br>例如：<br>while(scanf(“%d%d”,&amp;a,&amp;b)!=EOF)<br>  printf(“%d\n”,a+b);</p>
+<h1 id="fabs-a-＜1e－10"><a href="#fabs-a-＜1e－10" class="headerlink" title="fabs(a)＜1e－10"></a>fabs(a)＜1e－10</h1><p>如果fabs(a)＜1e－6，则默认a=0.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fabs</span>(a)＜<span class="number">1</span>e－<span class="number">6</span>;</span><br><span class="line"><span class="comment">//fabs()为浮点数的绝对值</span></span><br><span class="line"><span class="comment">//库函数为math.h</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>C语言中浮点运算是有精度限制的，在经过很多次运算之后，这个误差会累积下来，理论上等于0，但由于精度问题，C语言算出来不是0，这种情况经常有。所以设定一个限度，认为绝对值小于0.000001就是0了，这个0.000001是经验值，实践中表现的比较好.</p>
+<ul>
+<li>在浮点数的除法运算时，要注意这个问题。</li>
+</ul>
+<h1 id="数据类型溢出问题"><a href="#数据类型溢出问题" class="headerlink" title="数据类型溢出问题"></a>数据类型溢出问题</h1><blockquote>
+<p>ZZULIOJ</p>
+<h5 id="1063-最大公约与最小公倍"><a href="#1063-最大公约与最小公倍" class="headerlink" title="1063: 最大公约与最小公倍"></a><strong>1063: 最大公约与最小公倍</strong></h5><p><strong>输入</strong><br>输入两个正整数n和m（n,m&lt;=1000000)。输入保证最终结果在int范围内。</p>
+</blockquote>
+<p>数据较大的数据在运行过程中可能发生数据溢出。</p>
+<ul>
+<li>一般乘法可能溢出，但是除法一定不会溢出。因此同时存在乘法和除法运算的式子里应该先写除法，避免过程溢出。</li>
+<li>保险起见数据类型还是应该改为double以保证风险最小</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>字节</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>4</td>
+<td>（-2^31～2^31-1）</td>
+</tr>
+<tr>
+<td>long int 或 long</td>
+<td>4</td>
+<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
+</tr>
+<tr>
+<td>long long int 或 long long</td>
+<td>8</td>
+<td>-2^63(-9.2233720368548e+18) ~ 2^63-1(9.2233720368548e+18)</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4</td>
+<td>-/+3.4e38（精确到6位小数）</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>-/+1.7e308（精确到15位小数）</td>
+</tr>
+</tbody></table>
+<h1 id="c中nan，inf详解"><a href="#c中nan，inf详解" class="headerlink" title="c中nan，inf详解"></a>c中nan，inf详解</h1><p><strong>nan</strong>： not a number 非数字</p>
+<p>注意事项：对负数开方sqrt(-1.0)、 对负数求对数(log(-1.0))、 0.0/0.0、 0.0*inf、 inf/inf、 inf-inf 这些操作都会得到nan。</p>
+<p>(0/0会产生操作异常；0.0/0.0不会产生操作异常，而是会得到nan)</p>
+<p>辨别方法：isnan() : ture is a nan, false otherwise</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">isnan(NaN) &#x3D; true</span><br><span class="line"></span><br><span class="line">isnan(Inf) &#x3D; false</span><br><span class="line"></span><br><span class="line">isnan(0.0) &#x3D; false</span><br><span class="line"></span><br><span class="line">isnan(DBL_MIN&#x2F;2.0) &#x3D; false</span><br><span class="line"></span><br><span class="line">isnan(0.0 &#x2F; 0.0)   &#x3D; true</span><br><span class="line"></span><br><span class="line">isnan(Inf - Inf)   &#x3D; true</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>inf</strong> : infinity 无穷大的数，一般是超过浮点数的表示范围。</p>
+<p>注意事项：</p>
+<ol>
+<li><p>1.0/0.0等于inf，-1.0/0.0等于-inf，0.0+inf=inf；</p>
+</li>
+<li><p>1.0/inf等于0.0</p>
+</li>
+<li><p>inf是可以与其他浮点数进行比较的，即可以参与&lt;=、&gt;+、==、!=等运算。</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">辨别方法：isinf(): ture is a nan, false otherwise</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">isinf(NaN) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isinf(Inf) = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">isinf(<span class="number">0.0</span>) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isinf(<span class="built_in">exp</span>(<span class="number">800</span>)) = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">isinf(DBL_MIN/<span class="number">2.0</span>) = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>另一个辨别方法：isfinite(): ture is a finite value, false otherwise。可用来一起判断inf和nan。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">isfinite(NaN) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isfinite(Inf) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isfinite(<span class="number">0.0</span>) = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">isfinite(<span class="built_in">exp</span>(<span class="number">800</span>)) = <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">isfinite(DBL_MIN/<span class="number">2.0</span>) = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/" data-id="ckglfn8dx0007c87ya5605rqn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言：结构类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.191Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C语言：结构与其他数据类型"><a href="#C语言：结构与其他数据类型" class="headerlink" title="C语言：结构与其他数据类型"></a>C语言：结构与其他数据类型</h1><p>通过<strong>结构变量</strong>提高表达数据的能力.</p>
+<ul>
+<li>为结构建立一个格式或者样式.</li>
+<li>声明一个适合该样式的变量.</li>
+<li>访问结构变量的各个部分.</li>
+</ul>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><h4 id="建立结构声明"><a href="#建立结构声明" class="headerlink" title="建立结构声明"></a>建立结构声明</h4><p>结构声明描述一个结构的组织布局.</p>
+<p>如:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span>              <span class="comment">//struct 标记名</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">10</span>];       <span class="comment">//结构成员列表(任意数据类型或者结构)</span></span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">float</span> value;</span><br><span class="line">&#125;;                        <span class="comment">//分号;表示该 结构声明 结束</span></span><br></pre></td></tr></table></figure>
+
+<p>结构声明(模板)仅仅该对象由什么组成,并未创建实际的对象.</p>
+<h4 id="定义结构变量"><a href="#定义结构变量" class="headerlink" title="定义结构变量"></a>定义结构变量</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span>              </span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">10</span>];      </span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">float</span> value;</span><br><span class="line">&#125;;   <span class="comment">//建立结构声明</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>;</span>   <span class="comment">//创建了一个结构变量library,该变量的结构布局是book</span></span><br></pre></td></tr></table></figure>
+
+<p>简化形式:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span>              <span class="comment">//sturct 标记名 (如果该模板仅仅使用一次,可省略)</span></span><br><span class="line">    <span class="keyword">char</span> title[<span class="number">10</span>];      <span class="comment">//成员表或成员函数</span></span><br><span class="line">    <span class="keyword">char</span> author[<span class="number">10</span>];    </span><br><span class="line">    <span class="keyword">float</span> value;</span><br><span class="line">&#125;library;               <span class="comment">//结构体变量表,可以同时定义多个结构体变量,用逗号隔开</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="初始化结构"><a href="#初始化结构" class="headerlink" title="初始化结构"></a>初始化结构</h4><p>与初始化数组语法类似.</p>
+<p>使用一对花括号,各个初始化项用逗号分隔.</p>
+<p>如:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span>&#123;</span>              </span><br><span class="line">    abcdefghij,      </span><br><span class="line">    klmnopqrst,</span><br><span class="line">    <span class="number">1.9</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="访问结构成员"><a href="#访问结构成员" class="headerlink" title="访问结构成员"></a>访问结构成员</h4><p>使用结构成员运算符—-点(.)访问结构中的成员</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">library.value=<span class="number">3</span>  ;  <span class="comment">//对结构中float类型变量value进行赋值</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span>=</span>&#123;.value=<span class="number">3</span>&#125;;  <span class="comment">//结构的初始化器</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%f&quot;</span>,&amp;library.value); </span><br><span class="line"><span class="comment">//由此可见逗号(,取成员)的优先级高于&amp;(取地址)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="向函数传递结构的信息"><a href="#向函数传递结构的信息" class="headerlink" title="向函数传递结构的信息"></a>向函数传递结构的信息</h3><h4 id="传递结构"><a href="#传递结构" class="headerlink" title="传递结构"></a>传递结构</h4><ul>
+<li>结构作为函数参数<ul>
+<li>整个结构可以作为参数的值传入函数</li>
+<li>这时候是在函数内新建一个结构变量,并复制调用者的结构的值<ul>
+<li>只是传递了原结构的值</li>
+</ul>
+</li>
+<li>也可以返回一个结构<ul>
+<li>可以通过返回这个结构给调用者，解决传入函数的是外面那个结构的克隆体而原结构没有改变的问题。（同类型结构可以直接赋值）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="传递结构的地址"><a href="#传递结构的地址" class="headerlink" title="传递结构的地址"></a>传递结构的地址</h4><blockquote>
+<p>“If a large structure is to be passed to a function, it is generally more efficient to pass a pointer than to copy the whole structure”                                                                                  —— K&amp;R</p>
+</blockquote>
+<p>例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">date</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> month; </span><br><span class="line">    <span class="keyword">int</span> day;</span><br><span class="line">    <span class="keyword">int</span> year;</span><br><span class="line">&#125;myday; </span><br><span class="line"></span><br><span class="line"><span class="comment">//声明与初始化结构指针</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">date</span> *<span class="title">p</span>=</span>&amp;myday; </span><br><span class="line"><span class="comment">//定义了一个指向struct date模板类型的指针变量，并被赋上myday的地址</span></span><br><span class="line"></span><br><span class="line">(*p).month=<span class="number">12</span>; <span class="comment">//常规方式1</span></span><br><span class="line">p-&gt;month=<span class="number">12</span>;  <span class="comment">//方式2，（更加简洁）</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>用-&gt;表示指针所指的结构变量中的成员</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">struct point* <span class="title">getStruct</span><span class="params">(struct point *p)</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;p-&gt;x); </span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;p-&gt;y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d,%d&quot;</span>,&amp;p-&gt;x,&amp;p-&gt;y);</span><br><span class="line">    <span class="keyword">return</span> p;<span class="comment">//方便接下来有函数调用，提高程序简洁度</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h3 id="结构数组"><a href="#结构数组" class="headerlink" title="结构数组"></a>结构数组</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">book</span> <span class="title">library</span> [10];</span></span><br></pre></td></tr></table></figure>
+
+<p>以上代码把library声明为一个内含10个元素的数组。数组的每一个元素都是book类型的结构变量</p>
+<h3 id="嵌套结构"><a href="#嵌套结构" class="headerlink" title="嵌套结构"></a>嵌套结构</h3><p>一个结构包含另一个结构。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">point</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">int</span> y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//rectangle结构里的成员也是结构point</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rectangle</span>&#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">point</span> <span class="title">ptl</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">point</span> <span class="title">pt2</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> x1;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果有变量定义：</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">rectangle</span> <span class="title">r</span>,*<span class="title">rp</span>;</span></span><br><span class="line">rp =&amp;r;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//那么下面的四种形式是等价的：</span></span><br><span class="line">x1 = r.ptl.x </span><br><span class="line">x1 = rp-&gt;ptl.x </span><br><span class="line">x1 = (r.ptl).x </span><br><span class="line">x1 = (rp-&gt;ptl).x</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p><strong>枚举</strong> 是一种用户定义的数据类型。</p>
+<p><strong>枚举类型</strong>可以声明符号名称来表示整型常量。</p>
+<p>目的：提高程序可读性和可维护性。</p>
+<p>它用关键字enum以如下语法来声明：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> 枚举类型名字&#123;</span>名字<span class="number">0.</span>...（枚举符）..名字n&#125;；</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>枚举类型名字通常并不真的使用,要用的是在大括号里的名字</p>
+<p>因为它们就是就是常量符号,它们的类型是int,值则依次从0到n。</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">colors</span>&#123;</span>red, yellow.,green&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建了三个常量,red的值是0, yellow是1,而 green是2</li>
+<li>当需要一些可以排列起来的常量值时,定义枚举的意义就是给了这些常量值名字。</li>
+</ul>
+<h2 id="联合"><a href="#联合" class="headerlink" title="联合"></a>联合</h2><p><strong>联合</strong>是一种数据类型，它能够在<strong>同一个内存空间</strong>中储存不同的数据类型。</p>
+<ul>
+<li>储存<ul>
+<li>所有的成员共享一个空间</li>
+<li>同一时间只有一个成员是有效的</li>
+<li>union的大小是其最大的成员</li>
+</ul>
+</li>
+<li>初始化<ul>
+<li>对第一个成员做初始化</li>
+</ul>
+</li>
+</ul>
+<h2 id="自定义数据类型（typedef）"><a href="#自定义数据类型（typedef）" class="headerlink" title="自定义数据类型（typedef）"></a>自定义数据类型（typedef）</h2><p>C语言提供了一个叫做 typedef的功能来声明一个已有的数据类型的新名字。</p>
+<p>声明类型新的名字</p>
+<ul>
+<li>新的名字是某种类型的别名</li>
+<li>改善了程序的可读性</li>
+</ul>
+<p>比如:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Length;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span><span class="keyword">int</span> x;<span class="keyword">int</span> y;&#125; rect;</span><br><span class="line"><span class="comment">//typedef 原类型名称 新名字</span></span><br></pre></td></tr></table></figure>
+
+<p>使得 Length成为int类型的别名。<br>这样, Length这个名字就可以代替int出现在变量定义和参数声明的地方了:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Length a, b, len;</span><br><span class="line">Length numbers[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/" data-id="ckglfn8du0006c87ybm1m3i62" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言：程序结构" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.188Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: C语言：程序结构<br>date:<br>tags:</p>
+<h1 id="C语言：程序结构"><a href="#C语言：程序结构" class="headerlink" title="C语言：程序结构"></a>C语言：程序结构</h1><h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><ul>
+<li><p>定义在函数外面的变量是全局变量</p>
+</li>
+<li><p>全局变量具有全局的生存期和作用域</p>
+<ul>
+<li>它们与任何函数都无关</li>
+<li>在任何函数内部都可以使用它们</li>
+</ul>
+</li>
+<li><p>如果函数内部存在与全局变量同名的变量,则全局变量被隐藏</p>
+</li>
+</ul>
+<h3 id="全局变量初始化"><a href="#全局变量初始化" class="headerlink" title="全局变量初始化"></a>全局变量初始化</h3><ul>
+<li>没有做初始化的全局变量会得到0值<ul>
+<li>指针会得到NULL值</li>
+</ul>
+</li>
+<li>只能用编译时刻已知的值来初始化全局变量</li>
+<li>它们的初始化发生在main函数之前</li>
+</ul>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>不要使用全局变量来在函数间传递参数和结果</li>
+<li>尽量避免使用全局变量<ul>
+<li>使用全局变量和静态本地变量的函数是线程不安全的</li>
+</ul>
+</li>
+</ul>
+<h2 id="返回指针的函数"><a href="#返回指针的函数" class="headerlink" title="*返回指针的函数"></a>*返回指针的函数</h2><ul>
+<li>返回本地（局部）变量的地址是危险的</li>
+<li>返回全局变量或静态本地变量的地址是安全的</li>
+<li>返回在函数内 malloc的内存是安全的,但是容易造成问题</li>
+<li>最好的做法是返回传入的指针</li>
+</ul>
+<h2 id="静态本地变量"><a href="#静态本地变量" class="headerlink" title="静态本地变量"></a>静态本地变量</h2><ul>
+<li><ul>
+<li>在本地变量定义时加上 static修饰符就成为静态本地变量</li>
+</ul>
+</li>
+<li><ul>
+<li>当函数离开的时候,静态本地变量会继续存在并保持其值</li>
+</ul>
+</li>
+<li><ul>
+<li>静态本地变量的初始化只会在第一次进入这个函数时做,以后进入函数时会保持上次离开时的值</li>
+</ul>
+</li>
+<li><p>静态本地变量实际上是特殊的全局变量</p>
+</li>
+<li><p>它们位于相同的内存区域</p>
+</li>
+<li><p>静态本地变量具有全局的生存期,函数内的局部作用域</p>
+<ul>
+<li>static在这里的意思是局部作用域(本地可访问)</li>
+</ul>
+</li>
+</ul>
+<h2 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PX printf(<span class="meta-string">&quot;x is %d.\n&quot;</span>,x)</span></span><br><span class="line"><span class="comment">//预处理器指令——宏——替换体</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="编译预处理指令"><a href="#编译预处理指令" class="headerlink" title="编译预处理指令"></a>编译预处理指令</h3><ul>
+<li>#开头的是编译预处理指令</li>
+<li>不是C语言的成分，但是C语言程序离不开</li>
+<li>#define用来定义一个宏</li>
+</ul>
+<h3 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h3><ul>
+<li>如果一个宏的值中有其他的宏的名字,也是会被替换的</li>
+<li>如果一个宏的值超过一行,最后一行之前的行末需要加\</li>
+<li>宏的值后面出现的注释不会被当作宏的值的一部分</li>
+</ul>
+<h4 id="没有值的宏"><a href="#没有值的宏" class="headerlink" title="没有值的宏"></a>没有值的宏</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#define_DEBUG</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这类宏是用于条件编译的,后面有其他的编译预处理指令来检查这个宏是否已经被定义过了</li>
+</ul>
+<h4 id="预定义的宏"><a href="#预定义的宏" class="headerlink" title="预定义的宏"></a>预定义的宏</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_LINE_ <span class="comment">//源代码此时行号</span></span><br><span class="line">_FILE_ <span class="comment">//源代码文件</span></span><br><span class="line">_DATE_ <span class="comment">//源代码日期</span></span><br><span class="line">_TIME_ <span class="comment">//源代码时间</span></span><br><span class="line">_STDC_</span><br></pre></td></tr></table></figure>
+
+<h2 id="带参数的宏"><a href="#带参数的宏" class="headerlink" title="带参数的宏"></a>带参数的宏</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MEAN(x,y) ( (x)+(y)/2 )</span></span><br><span class="line">      <span class="comment">//宏(宏参数)   替换体</span></span><br></pre></td></tr></table></figure>
+
+<p>在#define中使用参数可以创建外形与作用与函数类似的<strong>类函数宏</strong>.</p>
+<ul>
+<li><p>一切都要括号</p>
+<ul>
+<li>整个值都要括号</li>
+<li>参数出现的每个地方都要括号</li>
+</ul>
+</li>
+<li><p>可以带多个参数</p>
+</li>
+<li><p>也可以组合（嵌套）使用其他的宏</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/" data-id="ckglfn8ds0005c87y5sly7cmp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言：数组" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.186Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C语言：数组"><a href="#C语言：数组" class="headerlink" title="C语言：数组"></a>C语言：数组</h1><p><strong>数组由数据类型相同的一系列元素组成</strong><br>是一种容器(放东西的东西),由连续的储存单元组成。<br>特点是:</p>
+<ul>
+<li>其中所有的元素具有相同的数据类型;</li>
+<li> 一旦创建,不能改变大小<br>(数组中的元素在内存中是连续依次排列的)</li>
+</ul>
+<h2 id="定义数组"><a href="#定义数组" class="headerlink" title="定义数组"></a>定义数组</h2><p><strong>&lt;类型&gt;变量名称[元素数量]</strong><br>例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int grades[100]:</span><br><span class="line">double weight[20];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>元素数量必须是整数</li>
+</ul>
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200824112012737.png" alt="image-20200824112012737"></p>
+<h3 id="数组的单元"><a href="#数组的单元" class="headerlink" title="数组的单元"></a>数组的单元</h3><ul>
+<li>数组的每个单元就是数组类型的一个变量</li>
+<li>使用数组时放在[中的数字叫做下标或索引,下标从0开始计数:</li>
+</ul>
+<h2 id="初始化数组"><a href="#初始化数组" class="headerlink" title="初始化数组"></a>初始化数组</h2><p>数组的集成初始化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[ ] &#x3D;&#123;2,4,6,7,1,3,5,9,11,13,23,14,32&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>直接用大括号给出数组的所有元素的初始值</li>
+<li>不需要要给出数组的大小,编译器替你数数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int count [number] &#x3D;&#123;0)；</span><br><span class="line"></span><br><span class="line">for（i&#x3D;0; i&lt;number; i++) &#123;</span><br><span class="line">count[i]&#x3D;0;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;上面两种初始化方式效果相同</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="指定初始化器"><a href="#指定初始化器" class="headerlink" title="指定初始化器"></a>指定初始化器</h3><p>可以初始化指定的数组元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int a[5]&#x3D;&#123;[4]&#x3D;1&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对于一般初始化，在初始化一个元素后，未初始化的元素都会被设置为0.</li>
+<li>如果指定初始化器后面有更多值，后面的值将被用于初始化指定元素后面的元素</li>
+<li>如果再次初始化指定元素，后者会覆盖之前的初始化。</li>
+<li>对于未指定元素大小数组的初始化，编译器会设置一个刚好恰当的值。<h2 id="数组的大小"><a href="#数组的大小" class="headerlink" title="数组的大小"></a>数组的大小</h2>sizeof给出整个数组所占据的内容的大小,单位是字节<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sizeof(a)&#x2F;sizeof(a[0])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+sizeof(a[0])给出数组中单个元素的大小,于是相除就得到了数组的单元个数<h2 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h2><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200824111837475.png" alt="image-20200824111837475"></li>
+</ul>
+<p>注：<br><strong>数组作为函数参数时，往往必须再用另一个参数来传入数组的大小。</strong><br>    数组作为函数的参数时:<br>    * 不能在中给出数组的大小</p>
+<ul>
+<li>不能再利用 sizeof来计算数组的元素个数!</li>
+</ul>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><h3 id="二维数组的初始化"><a href="#二维数组的初始化" class="headerlink" title="二维数组的初始化"></a>二维数组的初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int a[][5]&#x3D;&#123;</span><br><span class="line">&#123;0,1,2,3,4&#125;,</span><br><span class="line">&#123;2,3,4,5,6&#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F;或者：</span><br><span class="line">int b[2][3]&#x3D;&#123;1,2,3,4,5,6&#125;;</span><br><span class="line">&#x2F;&#x2F;表示  12</span><br><span class="line">          34</span><br><span class="line">          56</span><br></pre></td></tr></table></figure>
+<ul>
+<li>列数是必须给出的,行数可以由编译器来数</li>
+<li>每行一个{},逗号分隔</li>
+<li>最后的逗号可以存在,有古老的传统</li>
+<li>如果省略,表示补零</li>
+<li>也可以用定位(C99ON)</li>
+</ul>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><h4 id="大数组要定义在主函数外部的原因"><a href="#大数组要定义在主函数外部的原因" class="headerlink" title="大数组要定义在主函数外部的原因"></a>大数组要定义在主函数外部的原因</h4><ul>
+<li><p>全局变量在静态存储区内分配内存</p>
+</li>
+<li><p>局部变量是在栈内分配内存空间的</p>
+</li>
+</ul>
+<p>C语言编写的程序会在运行期间创建一个栈堆段，用来保存函数的调用关系和局部变量。</p>
+<p>而在main函数内部定义大数组相当于在栈内需要一个很大的空间，会造成栈的溢出。<br>因此，当我们需要定义一个极大的数组时，最好在mian 函数外部定义这个大数组。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/" data-id="ckglfn8dq0004c87yh7snapeu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言：指针" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%8C%87%E9%92%88/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.183Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C语言：指针"><a href="#C语言：指针" class="headerlink" title="C语言：指针"></a>C语言：指针</h1><p><strong>从根本上看， 指针(pointer)是一个值为内存地址的变量（或者数据对象）。</strong></p>
+<h2 id="运算符-amp-：查找地址"><a href="#运算符-amp-：查找地址" class="headerlink" title="运算符  &amp;：查找地址"></a>运算符  &amp;：查找地址</h2><p>&amp;，可以获得变量的地址，它的操作数必须是变量。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a=<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *ptr1;</span><br><span class="line"><span class="comment">//变量类型为储存int类型变量地址的指针</span></span><br><span class="line"></span><br><span class="line">ptr1=&amp;a ; <span class="comment">//把a的地址赋给指针ptr1</span></span><br><span class="line"><span class="comment">//对于这条语句，可以说ptr“指向”a。</span></span><br><span class="line"><span class="comment">//a是可以修改的变量，&amp;a是常量</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;a的地址为%p\n&quot;</span>,&amp;a);</span><br><span class="line"><span class="comment">//%p 是输出地址的转化说明，通常将地址以十六进制输出。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="指针变量"><a href="#指针变量" class="headerlink" title="指针变量"></a>指针变量</h2><p>就是保存地址的变量。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* p.q; </span><br><span class="line"><span class="keyword">int</span> *p,q;</span><br><span class="line"><span class="comment">//两者含义均相同。</span></span><br><span class="line"><span class="comment">//p为一个指针，q为一个int变量</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>普通变量的值是实际的值</li>
+<li>指针变量的值是具有实际值的变量的地址。</li>
+</ul>
+<h3 id="间接运算符："><a href="#间接运算符：" class="headerlink" title="间接运算符：*"></a>间接运算符：*</h3><p>单目运算符，后跟一个指针名或地址时，*给出储存在指针指向地址上的值。</p>
+<p>可以做右值，也可以做左值。</p>
+<h3 id="指针的类型"><a href="#指针的类型" class="headerlink" title="指针的类型"></a>指针的类型</h3><ul>
+<li>无论指向什么类型,所有的指针的大小都是一样的,因为都是地址</li>
+<li>但是指向不同类型的指针是不能直接互相赋值的<ul>
+<li>这是为了避免用错指针</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用指针在函数间通信"><a href="#使用指针在函数间通信" class="headerlink" title="使用指针在函数间通信"></a>使用指针在函数间通信</h2><h3 id="初级应用场景一："><a href="#初级应用场景一：" class="headerlink" title="初级应用场景一："></a>初级应用场景一：</h3><ul>
+<li><p>函数返回多个值,某些值就只能通过指针返回</p>
+</li>
+<li><p>传入的参数实际上是需要保存带回的结果的变量</p>
+</li>
+</ul>
+<p>函数往往只能返回一个值，并且函数内定义的变量与main里的变量无关（本地变量），所以对于要返回多个变量函数的情况，可以通过指针在函数间通信。</p>
+<p>例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//swap </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>*a,<span class="keyword">int</span>*b)</span></span>;</span><br><span class="line"><span class="keyword">int</span> main&#123;</span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">3</span>;</span><br><span class="line">    <span class="keyword">int</span> b=<span class="number">4</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a=%d,b=%d/n&quot;</span>,a,b);</span><br><span class="line">    swap(&amp;a,&amp;b);<span class="comment">//向swap函数传递变量a,b的地址</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a=%d,b=%d/n&quot;</span>,a,b);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">void</span> swap(<span class="keyword">int</span>*a,<span class="keyword">int</span>*b)&#123;   <span class="comment">//指针让swap函数通过局部变量改变main中的值。</span></span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    temp=*a;<span class="comment">//*a,*b表示a,b地址所指向的变量的值，可以写入与读取。</span></span><br><span class="line">    *a=*b;  <span class="comment">//a的值等于   *（&amp;a)</span></span><br><span class="line">    *b=temp;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<h3 id="初级应用场景二"><a href="#初级应用场景二" class="headerlink" title="初级应用场景二"></a>初级应用场景二</h3><ul>
+<li><p>函数返回运算的状态,结果通过指针返回·</p>
+</li>
+<li><p>常用的套路是让函数返回特殊的不属于有效范围内的值来表示出错，</p>
+<p>1或0(在文件操作会看到大量的例子)</p>
+</li>
+<li><p>但是当任何数值都是有效的可能结果时,就得分开返回</p>
+</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio. h&gt;</span></span></span><br><span class="line"><span class="comment">//如果除法成功,返回1;否则返回0 * </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> *result)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123; </span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">5</span>;</span><br><span class="line">    <span class="keyword">int</span> b=<span class="number">2</span>; </span><br><span class="line">    <span class="keyword">int</span> c; </span><br><span class="line">    if divide(a, b, &amp;c))&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;d/%d=%d\n&quot;</span>, a, b, c); </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;除数为0&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> *result)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ret =<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>) ret =<span class="number">0</span>; </span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        *result=a/b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h2><ul>
+<li>定义了指针变量,还没有指向任何变量,就开始使用指针</li>
+</ul>
+<h2 id="数组与指针"><a href="#数组与指针" class="headerlink" title="数组与指针"></a>数组与指针</h2><p>数组变量是特殊的指针</p>
+<h4 id="数组的地址"><a href="#数组的地址" class="headerlink" title="数组的地址"></a>数组的地址</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;a[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>如上，所取出的3个地址均相同，都为数组首元素的内存地址。</p>
+<p>由此，<strong>数组名为数组首元素的地址。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a==&amp;a[<span class="number">0</span>];<span class="comment">//数组名为数组首元素的地址</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="数组单元的地址"><a href="#数组单元的地址" class="headerlink" title="数组单元的地址"></a>数组单元的地址</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;a[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+
+<h4 id="相邻的数组单元地址"><a href="#相邻的数组单元地址" class="headerlink" title="相邻的数组单元地址"></a>相邻的数组单元地址</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;a[<span class="number">0</span>]);</span><br><span class="line">pintf(<span class="string">&quot;%p\n&quot;</span>,&amp;a[<span class="number">1</span>]);</span><br></pre></td></tr></table></figure>
+
+<p> 对于int类型的数组，相邻数组单元差距一直为4。</p>
+<h3 id="数组变量是特殊的指针"><a href="#数组变量是特殊的指针" class="headerlink" title="数组变量是特殊的指针"></a>数组变量是特殊的指针</h3><p>数组变量本身表达地址,所以</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>];  </span><br><span class="line"><span class="keyword">int</span>*p=a;    <span class="comment">//无需用&amp;取地址,p则表示a数组的首单元地址。</span></span><br></pre></td></tr></table></figure>
+
+<p>但是数组的单元表达的是变量,需要用&amp;取地址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a==&amp;a[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>设有数组a,指向a的指针变量pa，则有以下关系：pa,a,&amp;a[0]均指向同一单元，是数组a的首地址，也是0号元素a[0]的地址。</p>
+<p>pa+1,a+1,&amp;a[1]均指向第2号元素，pa+i,a+i,&amp;a[i]均指向第i号元素.</p>
+<ul>
+<li><p>pa是变量，而a，&amp;a[i]是常量。</p>
+</li>
+<li><p>运算符可以对数组做,也可以对指针做</p>
+<blockquote>
+<p> p[0] &lt; = = &gt; a[0]</p>
+</blockquote>
+</li>
+<li><p>运算符可以对指针做,也可以对数组做:</p>
+<blockquote>
+<p>*a=25与a[0]=25效果相同</p>
+</blockquote>
+</li>
+<li><p>数组变量是 const的指针,所以不能被赋值</p>
+</li>
+</ul>
+<h2 id="指针与const"><a href="#指针与const" class="headerlink" title="指针与const"></a>指针与const</h2><h3 id="指针是const"><a href="#指针是const" class="headerlink" title="指针是const"></a>指针是const</h3><p>表示一旦得到了某个变量的地址,不能再指向其他变量</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *<span class="keyword">const</span> p=&amp;i;<span class="comment">//p是const</span></span><br><span class="line">*p=<span class="number">26</span>;<span class="comment">//OK</span></span><br><span class="line">p++;<span class="comment">//ERROR</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="所指是const"><a href="#所指是const" class="headerlink" title="所指是const"></a>所指是const</h3><p>表示不能<em>通过这个指针</em>去修改那个变量</p>
+<p>(并不能使得那个变量成为 const)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p=&amp;i;</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者写为int const* p2=&amp;i;</span></span><br><span class="line"><span class="comment">//const在*前面则为“所指是const”</span></span><br><span class="line"></span><br><span class="line">*p=<span class="number">26</span>;<span class="comment">//ERROR!不能通过指针修改</span></span><br><span class="line">i=<span class="number">26</span>;<span class="comment">//OK（*p)是const</span></span><br><span class="line">K =&amp;j; <span class="comment">//OK</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h3><p>总是可以把一个非const的值转换成const的</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span>*x)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a=<span class="number">15</span></span><br><span class="line">f(&amp;a);<span class="comment">// ok </span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> b=a;</span><br><span class="line"></span><br><span class="line">f(&amp;b); <span class="comment">// ok </span></span><br><span class="line">b=a+<span class="number">1</span>; <span class="comment">// Error!</span></span><br></pre></td></tr></table></figure>
+
+<p>场景：当要传递的参数的类型比地址大的时候,这是常用的手段:</p>
+<ul>
+<li>既能用比较少的字节数传递值给参数,</li>
+<li>又能避免函数对外面的变量的修改</li>
+</ul>
+<h3 id="const-数组"><a href="#const-数组" class="headerlink" title="const  数组"></a>const  数组</h3><ul>
+<li> 数组变量已经是 const的指针了,这里的 const表明数组的每个单元都是 <strong>const int</strong></li>
+<li>所以必须通过初始化进行赋值</li>
+</ul>
+<h4 id="保护数组值"><a href="#保护数组值" class="headerlink" title="保护数组值"></a>保护数组值</h4><ul>
+<li>因为把数组传入函数时传递的是地址,所以那个函数内部可以修改数组的值</li>
+<li>为了保护数组不被函数破坏,可以设置参数为 const </li>
+<li>int sum(const int a[ ], int length);</li>
+</ul>
+<h2 id="指针操作"><a href="#指针操作" class="headerlink" title="指针操作"></a>指针操作</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ptr_ops.c -- pointer operations</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">100</span>,<span class="number">200</span>,<span class="number">300</span>,<span class="number">400</span>,<span class="number">500</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> * ptr1, * ptr2, *ptr3;</span><br><span class="line">    </span><br><span class="line">    ptr1 = a;         <span class="comment">// 把数组a的地址赋给指针</span></span><br><span class="line">    ptr2 = &amp;a[<span class="number">2</span>];     <span class="comment">// 把数组第三个单元的地址赋给指针</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;指针变量的值:%p\n&quot;</span>,ptr1);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;指针所指地址储存的值:*ptr1 =%d\n&quot;</span>,*ptr1);</span><br><span class="line">    <span class="comment">//解引用（dereferenced pointer）：*运算符给出指针指向地址上存储的值。</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;指针地址:&amp;ptr1 =%p\n&quot;</span>,&amp;ptr1);<span class="comment">//取址，指针变量本身的地址</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 指针加法</span></span><br><span class="line">    ptr3 = ptr1 + <span class="number">4</span>;<span class="comment">//ptr1+4与&amp;a[4]等价</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n adding an int to a pointer:\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ptr1 + 4 = %p, *(ptr1 +4) = %d\n&quot;</span>,ptr1 + <span class="number">4</span>, *(ptr1 + <span class="number">4</span>));</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 一个指针减去一个整数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n subtracting an int from a pointer:\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ptr3 = %p, ptr3 - 2 = %p\n&quot;</span>,ptr3,  ptr3 - <span class="number">2</span>);</span><br><span class="line">    </span><br><span class="line">    ptr1++;            <span class="comment">// 递增指针</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n values after ptr1++:\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ptr1 = %p, *ptr1 =%d, &amp;ptr1 = %p\n&quot;</span>,ptr1, *ptr1, &amp;ptr1);</span><br><span class="line">    </span><br><span class="line">    ptr2--;            <span class="comment">// 递减指针</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\nvalues after --ptr2:\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ptr2 = %p, *ptr2 = %d, &amp;ptr2 = %p\n&quot;</span>,ptr2, *ptr2, &amp;ptr2);</span><br><span class="line">    </span><br><span class="line">    --ptr1;            <span class="comment">// 恢复为初始值</span></span><br><span class="line">    ++ptr2;            <span class="comment">// 恢复为初始值</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n Pointers reset to original values:\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ptr1 = %p, ptr2 = %p\n&quot;</span>,ptr1, ptr2);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 一个指针减去另一个指针</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n subtracting one pointer from another:\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ptr2 = %p, ptr1 = %p, ptr2 - ptr1 = %td\n&quot;</span>,</span><br><span class="line">           ptr2, ptr1, ptr2 - ptr1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="指针运算"><a href="#指针运算" class="headerlink" title="指针运算"></a>指针运算</h3><ul>
+<li>给一个指针加表示要让指针指向下一个变量</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> *p=a;</span><br><span class="line">*(p+<span class="number">1</span>)==a[<span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+
+<p>如果指针不是指向一片<strong>连续分配的空间</strong>,</p>
+<p>如数组,则这种运算没有意义</p>
+<ul>
+<li><p>给指针加、减一个整数</p>
+</li>
+<li><p>递增递减(++一)</p>
+</li>
+<li><p>两个指针相减</p>
+<ul>
+<li>等于两个指针的绝对地址相减，再除以类型大小</li>
+</ul>
+</li>
+</ul>
+<h3 id="p"><a href="#p" class="headerlink" title="*p++"></a>*p++</h3><ul>
+<li>取出p所指的那个数据来,完事之后顺便把p移到下一个位置去</li>
+<li>*的优先级虽然高,但是没有++高</li>
+<li>常用于数组类的连续空间操作</li>
+<li>在某些CPU上,这可以直接被翻译成一条汇编指令</li>
+</ul>
+<h3 id="指针比较"><a href="#指针比较" class="headerlink" title="指针比较"></a>指针比较</h3><ul>
+<li>&lt;,  &lt;= ,==  ,&gt; ,&gt;= ,!= 都可以对指针做</li>
+<li>比较它们在内存中的地址</li>
+<li>数组中的单元的地址肯定是线性递增的</li>
+</ul>
+<h3 id="0地址"><a href="#0地址" class="headerlink" title="0地址"></a>0地址</h3><ul>
+<li><p>当然你的内存中有0地址,但是0地址通常是个不能随便碰的地址</p>
+</li>
+<li><p>所以你的指针不应该具有0值</p>
+</li>
+<li><p>因此可以用0地址来表示特殊的事情:</p>
+<ul>
+<li><p>返回的指针是无效的</p>
+</li>
+<li><p>指针没有被真正初始化(先初始化为0)</p>
+</li>
+</ul>
+</li>
+<li><p><strong>NULL</strong>是一个预定定义的符号,表示0地址</p>
+<ul>
+<li>有的编译器不愿意你用0来表示0地址</li>
+</ul>
+</li>
+</ul>
+<h3 id="指针的类型转换"><a href="#指针的类型转换" class="headerlink" title="指针的类型转换"></a>指针的类型转换</h3><ul>
+<li><p>void*表示不知道指向什么东西的指针</p>
+<ul>
+<li>计算时与char*相同(但不相通)</li>
+</ul>
+</li>
+<li><p>指针也可以转换类型</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>*p =&amp;i; </span><br><span class="line"><span class="keyword">void</span>*q=(<span class="keyword">void</span>*)p;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这并没有改变p所指的变量的类型,而是让后人用不同的眼光通过p看它所指的变量</p>
+<ul>
+<li>我不再当你是int啦,我认为你就是个void!</li>
+</ul>
+</li>
+</ul>
+<h2 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h2><h3 id="函数malloc"><a href="#函数malloc" class="headerlink" title="函数malloc"></a>函数malloc</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> number;</span><br><span class="line">    <span class="keyword">int</span>*a;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    a=(<span class="keyword">int</span>*)<span class="built_in">malloc</span>(number*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line"><span class="comment">//申请n*sizeof(int)个字节的内存空间</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;number;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span><span class="comment">//把申请得来的空间还给“系统”</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//void*malloc(size_t size);</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>向 malloc申请的空间的大小是<strong>以字节为单位的</strong></p>
+<p>返回的结果是void*,需要类型转换为自己需要的类型</p>
+<ul>
+<li>如果申请失败则返回0,或者叫做NULL</li>
+</ul>
+<h3 id="free（）"><a href="#free（）" class="headerlink" title="free（）"></a>free（）</h3><ul>
+<li><p>把申请得来的空间还给“系统”</p>
+</li>
+<li><p>申请过的空间,最终都应该要还</p>
+</li>
+<li><p>只能还申请来的空间的首地址</p>
+</li>
+</ul>
+<p>常见问题：</p>
+<ul>
+<li><p>申请了没free—-&gt;长时间运行内存逐渐下降</p>
+</li>
+<li><p>地址变过了,直接去free</p>
+</li>
+<li><p>free过了再free</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%8C%87%E9%92%88/" data-id="ckglfn8do0003c87yayyyak9o" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言：字符串" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.181Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p><strong>字符串</strong>是一个或者多个字符的序列，以空字符(\0)结尾的char类型的数组。</p>
+<ul>
+<li><p>C语言的字符串是以字符数组的形态存在的</p>
+<ul>
+<li>不能用运算符对字符串做运算</li>
+<li>通过数组的方式可以遍历字符串</li>
+</ul>
+</li>
+<li><p>以0(整数0)结尾的一串字符</p>
+</li>
+<li><p>0或‘\0’是一样的,但是和‘0’不同</p>
+</li>
+<li><p>0标志字符串的结束,但它不是字符串的一部分</p>
+<ul>
+<li>计算字符串长度的时候不包含这个0</li>
+</ul>
+</li>
+<li><p>字符串以数组的形式存在,以数组或指针的形式访问</p>
+</li>
+<li><p>更多的是以指针的形式</p>
+</li>
+<li><p>string.h里有很多处理字符串的函数</p>
+</li>
+<li><p>唯一特殊的地方是字符串字面量(” “)<u><strong>可以用来初始化字符数组</strong></u></p>
+<blockquote>
+<p>不需要再定义字符数组，在定义一个字符指针变量时，便在内存中开辟了一个字符数组用来存放该字符串常量。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="字符串变量"><a href="#字符串变量" class="headerlink" title="字符串变量"></a>字符串变量</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *str =<span class="string">&quot;Hello&quot;</span>; </span><br><span class="line"><span class="comment">//给指针str所指向的字符数组写入Hello</span></span><br><span class="line"><span class="keyword">char</span> word[]=<span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> line[<span class="number">10</span>] =<span class="string">&quot;Hello&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Hello 会被编译器变成一个字符数组放在<em>某处</em>,这个数组的长度是6,结尾还有表示结束的0.</p>
+<ul>
+<li><p>str是一个指针,初始化为指向一个字符串常量</p>
+</li>
+<li><p>由于这个常量所在的地方,所以实际上<em>str</em>是 const char *<em>str</em>但是由于历史的原因,编译器接受不带const的写法.</p>
+</li>
+<li><p>所以字符数组所存放的位置<strong>只能读不能写</strong></p>
+<p> 字符串word[ ]可以修改</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>以数组形式</th>
+<th>以指针形式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用于<strong>构造</strong>一个字符串</td>
+<td>用于<strong>处理</strong>一个字符串</td>
+</tr>
+<tr>
+<td>可读可写入</td>
+<td>可读不可写入</td>
+</tr>
+<tr>
+<td>作为本地变量空间自动被回收</td>
+<td>处理参数           动态分配空间</td>
+</tr>
+</tbody></table>
+<h2 id="字符串的输入与输出"><a href="#字符串的输入与输出" class="headerlink" title="字符串的输入与输出"></a>字符串的输入与输出</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> <span class="built_in">string</span>[<span class="number">8</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,<span class="built_in">string</span>);<span class="comment">//不加&amp;</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, <span class="built_in">string</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>scanf读入一个单词(到空格、tab或回车为止)</li>
+<li>scanf是不安全的,因为不知道要读入的内容的长度</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> <span class="built_in">string</span>[<span class="number">8</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%7s&quot;</span>, <span class="built_in">string</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在%和s之间的数字表示最多允许读入的字符的数量,这个数字应该比数组的大小少一</p>
+<h2 id="字符串数组"><a href="#字符串数组" class="headerlink" title="字符串数组"></a>字符串数组</h2><blockquote>
+<p>char **a</p>
+</blockquote>
+<p>a是一个指针,指向另一个指针,那个指针指向一个字符(串)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> a[<span class="number">5</span>] [<span class="number">6</span>]=&#123;<span class="string">&quot;hello&quot;</span></span><br><span class="line">    <span class="string">&quot;world&quot;</span></span><br><span class="line">    <span class="string">&quot;hello&quot;</span></span><br><span class="line">    <span class="string">&quot;abcd&quot;</span></span><br><span class="line">    <span class="string">&quot;efgh&quot;</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>char a[5] [6] :</p>
+<table>
+<thead>
+<tr>
+<th align="center"><em>a[0]</em></th>
+<th>h</th>
+<th>e</th>
+<th>l</th>
+<th>l</th>
+<th>o</th>
+<th>\0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><em>a[1]</em></td>
+<td>w</td>
+<td>o</td>
+<td>r</td>
+<td>l</td>
+<td>d</td>
+<td>\0</td>
+</tr>
+<tr>
+<td align="center"><em>a[2]</em></td>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+<td>d</td>
+<td>\0</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><em>a[3]</em></td>
+<td>e</td>
+<td>f</td>
+<td>g</td>
+<td>h</td>
+<td>\0</td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><em>a[4]</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><em>a[5]</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h2><h3 id="putchar"><a href="#putchar" class="headerlink" title="putchar"></a>putchar</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">putchar</span><span class="params">(<span class="keyword">int</span> c)</span>:</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>向标准输出写一个字符</p>
+</li>
+<li><p>返回写了几个字符,EOF(-1)表示写入失败</p>
+</li>
+</ul>
+<h3 id="getchar"><a href="#getchar" class="headerlink" title="getchar"></a>getchar</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gerchar</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>从标准输入读入一个字符</li>
+<li>返回类型是int是为了返回EOF(-1)<ul>
+<li>Windows-&gt;Ctrl-Z</li>
+<li> Unix-&gt;Ctrl-D</li>
+</ul>
+</li>
+</ul>
+<h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h3><p>头文件  <code>string.h</code>  </p>
+<h2 id="附-include-lt-ctype-h-gt"><a href="#附-include-lt-ctype-h-gt" class="headerlink" title="附#include&lt;ctype.h&gt;"></a>附#include&lt;ctype.h&gt;</h2><h3 id="1-isalnum"><a href="#1-isalnum" class="headerlink" title="1 isalnum"></a><strong>1 isalnum</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int sialnum(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>变量为字母或数字时，函数返回非0值，否则返回0。</p>
+<h3 id="2-isalpha"><a href="#2-isalpha" class="headerlink" title="2 isalpha"></a><strong>2 isalpha</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isalpha(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量为字母表中的字母时，函数返回非0值，否则返回0。各种语言的字母表互不相同，对于英语来说，字母表由大写和小写的字母A到Z组成。</p>
+<h3 id="3-iscntrl"><a href="#3-iscntrl" class="headerlink" title="3 iscntrl"></a><strong>3 iscntrl</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int iscntrl(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量是控制字符时，函数返回非0，否则返回0。</p>
+<h3 id="4-isdigit"><a href="#4-isdigit" class="headerlink" title="4 isdigit"></a><strong>4 isdigit</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isdigit(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量是十进制数字时，函数返回非0值，否则返回0。</p>
+<h3 id="5-isgraph"><a href="#5-isgraph" class="headerlink" title="5 isgraph"></a><strong>5 isgraph</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isgraph(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量为除空格之外的任何可打印字符，则函数返回非0值，否则返回0。</p>
+<h3 id="6-islower"><a href="#6-islower" class="headerlink" title="6 islower"></a><strong>6 islower</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int islower(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量是小写字母，函数返回非0值，否则返回0。</p>
+<h3 id="7-isprint"><a href="#7-isprint" class="headerlink" title="7 isprint"></a><strong>7 isprint</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isprint(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量是可打印字符(含空格)，则函数返回非0值，否则返回0。</p>
+<h3 id="8-ispunct"><a href="#8-ispunct" class="headerlink" title="8 ispunct"></a><strong>8 ispunct</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int ispunct(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量是除空格、字母和数字外的可打印字符，则函数返回非0，否则返回0。</p>
+<h3 id="9-isspace"><a href="#9-isspace" class="headerlink" title="9 isspace"></a><strong>9 isspace</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isspace(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量为空白字符(包括空格、换页符、换行符、回车符、水平制表符和垂直制表符)时，函数返回非0，否则返回0。</p>
+<h3 id="10-isupper"><a href="#10-isupper" class="headerlink" title="10 isupper"></a><strong>10 isupper</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isupper(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>如果变量为大写字母，函数返回非0，否则返回0。</p>
+<h3 id="11-isxdigit"><a href="#11-isxdigit" class="headerlink" title="11 isxdigit"></a><strong>11 isxdigit</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int isxdigit(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当变量为十六进制数字时，函数返回非0，否则返回0。</p>
+<h3 id="12-tolower"><a href="#12-tolower" class="headerlink" title="12 tolower"></a><strong>12 tolower</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int tolower(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当ch为大写字母时，返回其对应的小写字母；否则返回ch。</p>
+<h3 id="13-toupper"><a href="#13-toupper" class="headerlink" title="13 toupper"></a><strong>13 toupper</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;ctype.h&gt;</span><br><span class="line">int toupper(int ch);</span><br></pre></td></tr></table></figure>
+
+<p>当ch为小写字母时，返回其对应的大写字母；否则返回ch。</p>
+<h2 id="程序参数"><a href="#程序参数" class="headerlink" title="程序参数*"></a>程序参数*</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio. h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> i;</span><br><span class="line"> <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;argc;i++)&#123;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">&quot;%d:%s\n&quot;</span>,i,argv[i])</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>int main(int argc,char const *argv[ ])</p>
+<ul>
+<li>argv[]是命令本身</li>
+<li>当使用Unix的符号链接时,反映符号链接的名字</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-id="ckglfn8dl0002c87ygwnfbj9a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言：函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.177Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title:C语言：函数</span><br><span class="line">date: </span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+
+<h1 id="C语言：函数"><a href="#C语言：函数" class="headerlink" title="C语言：函数"></a>C语言：函数</h1><h2 id="函数的定义与使用"><a href="#函数的定义与使用" class="headerlink" title="函数的定义与使用"></a>函数的定义与使用</h2><p>函数：<strong>完成特定任务的独立程序代码单元</strong></p>
+<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><p>省去编写重复代码<br>方便后期修改完善<br>提高代码的可读性</p>
+<h2 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void sum (int begin,int end)</span><br></pre></td></tr></table></figure>
+
+<p>void——函数头，指函数返回类型。（void表示函数没有返回类型）<br>sum——函数名称<br>(int begin,int end)——参数<br><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200824123720746.png" alt="image-20200824123720746"></p>
+<h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><p><u><strong>函数名(参数值)</strong></u><br>( )起到了表示函数调用的重要作用<br>即使没有参数也需要括号<br>·如果有参数,则需要给出正确的数量和顺序</p>
+<p>这些值会被按照顺序依次用来初始化函数中的参数<br>如果函数有参数,调用函数时必须传递给它数量、类型正确的值  可以传递给函数的值是<strong>表达式的结果</strong>这包括：</p>
+<ul>
+<li><p>字面量</p>
+</li>
+<li><p>变量</p>
+</li>
+<li><p>函数的返回值</p>
+</li>
+<li><p>结算的结果</p>
+<p>函数先后关系</p>
+</li>
+</ul>
+<p>C的编译器<u>自上而下</u>顺序分析你的代码<br>所以要先声明/定义出函数，再调用函数</p>
+<h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2><p>提前告诉编译器你下面将要定义的函数类型<br>同时会在下面检查声明与定义的函数类型是否相符<br>(不会检查参数名称，所以在声明中可以不写参数名称只写类型，不过通常会写，方便阅读）</p>
+<p>在没有参数时</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">void f()</span><br><span class="line">void f(void)</span><br></pre></td></tr></table></figure>
+<p>前者在传统C中,它表示函数的参数表未知,并不表示没有参数<br>注意：如果参数有类型，在声明时一定要写上，如果没有参数，也要写成后者形式</p>
+<h3 id="函数原型"><a href="#函数原型" class="headerlink" title="函数原型"></a>函数原型</h3><p>函数头,以分号“;结尾,构成了函数的原型<br>用逗号分割的列表指明参数的数量和类型。</p>
+<h2 id="函数的参数与变量"><a href="#函数的参数与变量" class="headerlink" title="函数的参数与变量"></a>函数的参数与变量</h2><h4 id="传值-（参数的转移）"><a href="#传值-（参数的转移）" class="headerlink" title="传值 （参数的转移）"></a>传值 （参数的转移）</h4><p>每个函数有自己的变量空间,参数也位于这个独立的空间中,和其他函数没有关系</p>
+<p>\过去,对于函数参数表中的参数,叫做形式参数”<br>调用函数时给的值,叫做实际参数<br>（形式参数属于<em>本地/局部变量</em>，为该函数私有）</p>
+<h3 id="本地变量"><a href="#本地变量" class="headerlink" title="本地变量"></a>本地变量</h3><p> 函数的每次运行,就产生了一个独立的变量空间,在这个空间中的变量,是函数的这次运行所独有的,称作本地变量（局部变量/自动变量）</p>
+<p>定义在函数内部的变量就是本地变量</p>
+<p>参数也是本地变量</p>
+<h4 id="变量的生存期和作用域"><a href="#变量的生存期和作用域" class="headerlink" title="变量的生存期和作用域"></a>变量的生存期和作用域</h4><h5 id="生存期"><a href="#生存期" class="headerlink" title="生存期:"></a>生存期:</h5><p>什么时候这个变量开始出现了,到什么时候它消亡了</p>
+<h5 id="作用域"><a href="#作用域" class="headerlink" title="作用域:"></a>作用域:</h5><p>在(代码的)什么范围内可以访问这个变量(这个变量可以起作用)</p>
+<p>对于本地变量,这两个问题的答案是统一的:大括号内——<strong>块</strong></p>
+<h4 id="本地变量的规则"><a href="#本地变量的规则" class="headerlink" title="本地变量的规则"></a>本地变量的规则</h4><p>  <u> <strong>本地变量是定义在</strong>块<strong>内的</strong></u></p>
+<ul>
+<li> 它可以是定义在函数的块内</li>
+<li>也可以定义在语句的块内</li>
+<li>甚至可以随便拉一对大括号来定义变量</li>
+</ul>
+<p>程序运行进入这个块之前,<br>其中的变量不存在,离开这个块,其中的变量就消失了</p>
+<p> <u><strong>块外面定义的变量在里面仍然有效</strong></u><br>块里面定义了和外面同名的变量则掩盖了外面的（但不能在块内定义一个与外面同名的变量）</p>
+<ul>
+<li>本地变量不会被默认初始化</li>
+<li>参数在进入函数的时候被初始化了</li>
+</ul>
+<h3 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h3><ul>
+<li>C语言不允许<strong>函数嵌套定义</strong></li>
+<li>int main()也是一个函数，可以写成 int main(void)</li>
+<li>return(0)返回0可表示该程序正常运行</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%87%BD%E6%95%B0/" data-id="ckglfn8dg0001c87yaemp1kko" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言基础知识" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
+  <time datetime="2020-10-22T23:01:55.173Z" itemprop="datePublished">2020-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C语言基础知识"><a href="#C语言基础知识" class="headerlink" title="C语言基础知识"></a>C语言基础知识</h1><h2 id="C程序的基本构成"><a href="#C程序的基本构成" class="headerlink" title="C程序的基本构成"></a>C程序的基本构成</h2><ul>
+<li>预处理操作</li>
+<li>定义主函数</li>
+<li>变量定义</li>
+<li>部分变量赋值（初始化赋值或赋值语句）</li>
+<li>表达式计算（程序主体部分包括三种结构和算法）</li>
+<li>输出结果（利用输出函数输出一组或多组结果)</li>
+<li>程序正常结束</li>
+</ul>
+<p>要点：  </p>
+<p>1.C程序是由(函数)构成的。</p>
+<p>2.一个程序里(必须有)且(只能有)一个主函数。</p>
+<p>3.主函数位置可以是(任意)的。</p>
+<p>4.程序从(主函数)开始执行,在主函数中结束。</p>
+<p>5.大括号作为(函数体)来定义和使用。</p>
+<p>6.(分号)作为语句结束的基本标志。</p>
+<p>7.C程序一行语句可以(分多行写),最后一行末尾必须有(分号)。</p>
+<h2 id="程序的执行过程"><a href="#程序的执行过程" class="headerlink" title="程序的执行过程"></a>程序的执行过程</h2><h3 id="程序语言发展历经"><a href="#程序语言发展历经" class="headerlink" title="程序语言发展历经:"></a>程序语言发展历经:</h3><ul>
+<li><p>机器语言(0和1),</p>
+</li>
+<li><p>汇编语言(低级语言),</p>
+</li>
+<li><p>高级语言(C语言)</p>
+</li>
+</ul>
+<h3 id="程序执行的过程"><a href="#程序执行的过程" class="headerlink" title="程序执行的过程"></a>程序执行的过程</h3><p>源程序(c)——编译(目标文件obj)——链接(可执行文件exe)——运行程序</p>
+<ul>
+<li><p>编写好的程序称为(源程序)扩展名为(c)</p>
+</li>
+<li><p>对源程序文件进行(编译)操作,编译文件的扩展名为(obj)</p>
+</li>
+<li><p>对编译文件进行(链接)操作,链接文件的扩展名为(exe)</p>
+</li>
+</ul>
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200923215239708.png" alt="image-20200923215239708"></p>
+<h2 id="标识符的基本概念"><a href="#标识符的基本概念" class="headerlink" title="标识符的基本概念"></a>标识符的基本概念</h2><h3 id="用户标识符"><a href="#用户标识符" class="headerlink" title="用户标识符"></a>用户标识符</h3><ul>
+<li>由（字母）（数字）（下划线）构成，且第一个字符不能为数字。</li>
+<li>尽量以见名之意的形式命名</li>
+<li>不能与C关键字相同</li>
+</ul>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><h3 id="预定义标识符"><a href="#预定义标识符" class="headerlink" title="预定义标识符"></a>预定义标识符</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/23/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="ckglfn8d10000c87y1qkm7dci" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-article-title" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/22/article-title/" class="article-date">
@@ -88,6 +1239,7 @@
       
         <h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><h2 id="格子格子的第一篇博客"><a href="#格子格子的第一篇博客" class="headerlink" title="格子格子的第一篇博客"></a>格子格子的第一篇博客</h2><p>时间：10月22日</p>
 <p>（嘿嘿，同时今天也是我的生日）</p>
+<p>（感谢室友的蛋糕，1129赛高！！）</p>
 <p>突发奇想先搞一个自己的博客，以后可以上传一些自己的笔记，感想之类，感觉挺酷的</p>
 <p>本来是只打算了解一下，当了解了解就动手做了起来</p>
 <p><del>（本来是打算今天下午刷oj的）</del></p>
@@ -109,6 +1261,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+  </nav>
 
 </section>
         
@@ -139,7 +1296,23 @@
       <ul>
         
           <li>
-            <a href="/2020/10/22/article-title/">第一篇博客</a>
+            <a href="/2020/10/23/IO%E5%87%BD%E6%95%B0/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E8%AE%B0%E5%BD%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/23/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E6%95%B0%E7%BB%84/">(no title)</a>
           </li>
         
       </ul>
